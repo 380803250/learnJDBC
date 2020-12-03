@@ -1,0 +1,2 @@
+# learnJDBC
+noob  learning JDBC
