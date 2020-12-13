@@ -26,7 +26,7 @@ public class JDBCTest01 {
 			//3.获取操作数据库对象(Statement专门执行SQL语句)
 			stmt = conn.createStatement();
 			//4.执行SQL
-			String sql = "insert into takeout.goods(id, name, business_id, price, limit_num) values(101, 'asd', 1, 23, 2)";
+			String sql = "insert into takeout.goods(id, name, business_id, price, limit_num) values(100, 'asd', 1, 23, 2)";
 			int count = stmt.executeUpdate(sql);
 			System.out.print(count == 1? "保存成功" : "保存失败");
 			//5.处理查询结果集
