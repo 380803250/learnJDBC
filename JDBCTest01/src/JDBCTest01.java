@@ -14,9 +14,9 @@ public class JDBCTest01 {
 		try {
 			Driver driver = new com.mysql.cj.jdbc.Driver();//父类型引用指向子类型对象;
 			DriverManager.registerDriver(driver);
-			String url = "jdbc:mysql://127.0.0.1:3306/MySQL";
+			
+			String url = "jdbc:mysql://127.0.0.1:3306/MySQL?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
 			//网络资源定位符,网络上某个资源的绝对路径HTTP网络协议,数字是地址,加上端口
-
 			//	2.连接通道
 			String user = "root";
 			String password = "zxc123";
