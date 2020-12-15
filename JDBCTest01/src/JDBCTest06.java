@@ -37,7 +37,7 @@ public class JDBCTest06 {
 			
 			stmt = conn.createStatement();
 //			String sql = "SELECT * FROM jdbcuser.jdbcusers WHERE userid = "+id;
-//			存在SQL注入问题
+//			存在SQL注入问题,如果需要SQL语句拼接则可以使用
 			String sql = "SELECT * FROM jdbcuser.jdbcusers WHERE username = '"+userLoginInfo.get("loginName")+"'AND userpwd = '"+userLoginInfo.get("loginPwd")+"'";
 			String userid = null;
 			String username = null;

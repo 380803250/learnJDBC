@@ -36,9 +36,9 @@ public class JDBCTest07 {
 			conn = DriverManager.getConnection(url, user, password);
 			//SQL 的?表示一个占位符,并且不可以用''括起来.
 			String sql = "SELECT * FROM jdbcuser.jdbcusers WHERE username = ? AND userpwd = ?";
-			//程序执行到此处,会发送SQL语句给DMBS进行预编译处理
+			//程序执行到此处,会发送SQL语句给DMBS进行预编译处理,编译语句如果没有变化那么只编译一次,速度变快
 			ps = conn.prepareStatement(sql);
-			//下标从1开始
+			//下标从1开始,并且在编译阶段做类型的安全检查
 			ps.setString(1, userLoginInfo.get("loginName"));
 			ps.setString(2, userLoginInfo.get("loginPwd"));
 
